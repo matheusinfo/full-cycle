@@ -65,3 +65,6 @@ This README provides a reference guide for various Docker commands presented on 
 - `docker network create --driver bridge network_name` - Create a new network
 - `docker run -dit --name container_name --network network_name image_name` - Run a container on a specific network
 - `docker network connect network_name container_name` - Connect a container to an existing network
+
+## Logs
+- `docker logs image_name` - See the log's of a container
