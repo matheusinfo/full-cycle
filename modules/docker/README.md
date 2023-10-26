@@ -56,4 +56,12 @@ This README provides a reference guide for various Docker commands presented on 
 - `docker login` - Log in to Docker Hub.
 - `docker push image_name` -  Log in to Docker Hub.
 
+## Network
 
+- `docker network ls` - List networks
+- `docker network prune -y` - Remove unused networks
+- `docker network inspect bridge` - Inspect a bridge
+- `docker attach container_name` - Attach to a running container
+- `docker network create --driver bridge network_name` - Create a new network
+- `docker run -dit --name container_name --network network_name image_name` - Run a container on a specific network
+- `docker network connect network_name container_name` - Connect a container to an existing network
