@@ -50,6 +50,7 @@ This README provides a reference guide for various Docker commands presented on 
 - `docker images -a` - List all images and their dependencies.
 - `docker rmi imaged_id` - Remove an image based on its ID.
 - `docker build -t image_name:tag_version .` - Build a Dockerfile, setting a name, tag version, and local path.
+- `docker images | grep name_to_find` - Find images with the name
 
 ## Dockerhub
 
