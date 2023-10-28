@@ -71,7 +71,7 @@ This README provides a reference guide for various Docker commands presented on 
 ## Logs
 - `docker logs image_name` - See the log's of a container
 
-# Docker Compose Commands Reference
+## Docker Compose Commands Reference
 
 - `docker-compose up` - Run the Docker Compose file.
 - `docker-compose down` - Stop and remove containers defined in the Docker Compose file.
