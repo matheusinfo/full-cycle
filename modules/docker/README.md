@@ -59,8 +59,9 @@ This README provides a reference guide for various Docker commands presented on 
 
 ## Network
 
+- `docker network create -d bridge network_name` - Create a network
 - `docker network ls` - List networks
-- `docker network prune -y` - Remove unused networks
+- `docker network prune` - Remove unused networks
 - `docker network inspect bridge` - Inspect a bridge
 - `docker attach container_name` - Attach to a running container
 - `docker network create --driver bridge network_name` - Create a new network
@@ -69,3 +70,12 @@ This README provides a reference guide for various Docker commands presented on 
 
 ## Logs
 - `docker logs image_name` - See the log's of a container
+
+# Docker Compose Commands Reference
+
+- `docker-compose up` - Run the Docker Compose file.
+- `docker-compose down` - Stop and remove containers defined in the Docker Compose file.
+- `docker-compose up -d` - Run the Docker Compose in detached mode.
+- `docker-compose ps` - List the containers and their status defined in the Docker Compose file.
+- `docker-compose up -d --build` - Rebuild images and run the Docker Compose in detached mode.
+- `docker-compose down container_name` - Stop a single container with Docker Compose

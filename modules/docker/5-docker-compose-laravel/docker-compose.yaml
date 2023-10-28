@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  laravel:
+    build: 
+      context: ../3-laravel-multi-stage-building
+      dockerfile: Dockerfile
+    image: mapx/laravel
+    container_name: laravel
+    networks:
+      - laranet
+
+  nginx:
+    build: 
+      context: ../4-nginx-reverse-proxy
+      dockerfile: Dockerfile
+    image: mapx/nginx
+    container_name: nginx
+    networks:
+      - laranet
+    ports:
+      - "8080:80"
+
+networks:
+  laranet:
+    driver: bridge
