@@ -1,24 +1,38 @@
 package main
 
 import (
+	"database/sql"
 	"log"
 	"matheusinfo/full-cycle-graphql/graph"
+	"matheusinfo/full-cycle-graphql/internal/database"
 	"net/http"
 	"os"
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
+	_ "github.com/mattn/go-sqlite3"
 )
 
 const defaultPort = "8080"
 
 func main() {
+	db, err := sql.Open("sqlite3", "./data.db")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	categoryDb := database.NewCategory(db)
+
 	port := os.Getenv("PORT")
+
 	if port == "" {
 		port = defaultPort
 	}
 
-	srv := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &graph.Resolver{}}))
+	srv := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &graph.Resolver{
+		CategoryDB: categoryDb,
+	}}))
 
 	http.Handle("/", playground.Handler("GraphQL playground", "/query"))
 	http.Handle("/query", srv)
