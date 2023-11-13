@@ -25,6 +25,7 @@ input NewCourse {
 
 type Query {
   categories: [Category!]!
+  findCourseById(courseId: String!): Course!
   courses: [Course!]!
 }
 

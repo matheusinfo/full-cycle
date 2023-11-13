@@ -7,7 +7,7 @@ import (
 )
 
 type Category struct {
-	db         	*sql.DB
+	db          *sql.DB
 	ID          string
 	Name        string
 	Description string
@@ -44,7 +44,7 @@ func (category *Category) FindAll() ([]Category, error) {
 
 	defer rows.Close()
 
-	categories := []Category{}
+	var categories []Category
 
 	for rows.Next() {
 		var id, name, description string
@@ -57,4 +57,19 @@ func (category *Category) FindAll() ([]Category, error) {
 	}
 
 	return categories, nil
+}
+
+func (category *Category) FindByCourseID(courseID string) (Category, error) {
+	var id, name, description string
+
+	err := category.db.QueryRow(
+		"SELECT c.id, c.name, c.description FROM category c INNER JOIN courses co ON c.id = co.category_id WHERE co.id = $1",
+		courseID,
+	).Scan(&id, &name, &description)
+
+	if err != nil {
+		return Category{}, err
+	}
+
+	return Category{ID: id, Name: name, Description: description}, nil
 }
