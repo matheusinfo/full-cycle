@@ -2,7 +2,7 @@
 
 Install: https://github.com/petervanderdoes/gitflow-avh/wiki/Installing-on-Linux,-Unix,-etc.
 
-# Assinaturas
+# Signatures
 
 Install: sudo apt install gpg
 List Keys: gpg --list-secret-keys --keyid-form LONG
@@ -16,3 +16,11 @@ Config:
 
 Add another email to the key:
 - gpg --edit-key (ID of Key)
+
+# SemVer
+
+Link: https://semver.org/lang/pt-BR/
+
+# Conventional Commits
+
+Link: https://www.conventionalcommits.org/en/v1.0.0/
