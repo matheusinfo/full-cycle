@@ -45,4 +45,4 @@ jobs:
         with:
           context: ./modules/ci
           push: true
-          tags: matheusinfo/full-cycle-ci
+          tags: mapx18/full-cycle-ci
