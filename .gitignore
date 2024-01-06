@@ -1,3 +1,6 @@
 **/node_modules/
 go.work
 modules/docker/6-docker-compose-db/mysql
+**/.scannerwork
+**/coverage.out
+**/coverage/
