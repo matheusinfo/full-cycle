@@ -11,6 +11,7 @@ This repository is intended to store my progress throughout the Full Cycle cours
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/grpc">Grpc</a>
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/rest">Rest</a>
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/ci">CI</a>
+* <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/sonarqube">Sonarqube</a>
 
 
 ---
