@@ -12,10 +12,10 @@ This repository is intended to store my progress throughout the Full Cycle cours
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/rest">Rest</a>
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/ci">CI</a>
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/sonarqube">Sonarqube</a>
-
+* <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/ddd">DDD</a>
 
 ---
 
 <div align="center">
-  <b>@matheusinfo</b>
+  <a href="https://github.com/matheusinfo">@matheusinfo</a>
 </div>

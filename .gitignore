@@ -4,3 +4,4 @@ modules/docker/6-docker-compose-db/mysql
 **/.scannerwork
 **/coverage.out
 **/coverage/
+**/dist/
