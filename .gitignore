@@ -5,3 +5,6 @@ modules/docker/6-docker-compose-db/mysql
 **/coverage.out
 **/coverage/
 **/dist/
+burla-fullcycle
+kubectl
+kubectl.sha256
