@@ -29,3 +29,4 @@ List services: kubectl get services
 List deployments: kubectl get deployments
 Kubernet proxy: kubectl proxy --port=8080
 Logs: kubectl logs ${podname}
+Delete a deploy: kubectl delete deply ${deployName}
