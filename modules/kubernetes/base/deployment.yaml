@@ -16,32 +16,40 @@ spec:
     spec: 
       containers:
         - name: goserver
-          image: "mapx18/k8s-go:v6"
+          image: "mapx18/k8s-go:v5"
 
-          startupProbe:
-            httpGet:
-              path: /health
-              port: 8000
-            periodSeconds: 3
-            failureThreshold: 30
+          # resources:
+          #   requests:
+          #     cpu: "0.3"
+          #     memory: 20Mi
+          #   limits:
+          #     cpu: "0.3"
+          #     memory: 25Mi
+
+          # startupProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 8000
+          #   periodSeconds: 3
+          #   failureThreshold: 30
           
-          readinessProbe:
-            httpGet:
-              path: /health
-              port: 8000
-            periodSeconds: 3
-            failureThreshold: 1
-            initialDelaySeconds: 10
+          # readinessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 8000
+          #   periodSeconds: 3
+          #   failureThreshold: 1
+          #   initialDelaySeconds: 10
 
-          livenessProbe:
-            httpGet:
-              path: /health
-              port: 8000
-            periodSeconds: 5
-            failureThreshold: 1
-            timeoutSeconds: 1
-            successThreshold: 1
-            initialDelaySeconds: 20
+          # livenessProbe:
+          #   httpGet:
+          #     path: /health
+          #     port: 8000
+          #   periodSeconds: 5
+          #   failureThreshold: 1
+          #   timeoutSeconds: 1
+          #   successThreshold: 1
+          #   initialDelaySeconds: 20
 
           envFrom:
             - configMapRef:

@@ -29,4 +29,8 @@ List services: kubectl get services
 List deployments: kubectl get deployments
 Kubernet proxy: kubectl proxy --port=8080
 Logs: kubectl logs ${podname}
-Delete a deploy: kubectl delete deply ${deployName}
+Delete a deploy: kubectl delete deploy ${deployName}
+Show the usage: kubectl top pod ${deployName}
+Fortio test: kubectl run -it fortio --rm --image=fortio/fortio -- load -qps 800 -t 120s -c 70 "http://goserver-service/health"
+Run kubectl: kubectl port-forward svc/goserver-service 9000:80
+Watch: watch -n1 kubectl get ${deployName}
