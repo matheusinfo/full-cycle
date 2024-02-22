@@ -16,7 +16,7 @@ spec:
     spec: 
       containers:
         - name: goserver
-          image: "mapx18/k8s-go:v5"
+          image: "mapx18/k8s-go:v7"
 
           # resources:
           #   requests:

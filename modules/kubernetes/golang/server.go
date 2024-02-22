@@ -15,7 +15,7 @@ func main(){
 	http.HandleFunc("/family", LogFamily)
 	http.HandleFunc("/secret", Secret)
 	http.HandleFunc("/health", Health)
-	http.ListenAndServe(":80", nil)
+	http.ListenAndServe(":8000", nil)
 }
 
 func Hello(w http.ResponseWriter, r *http.Request){
