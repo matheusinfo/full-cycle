@@ -34,3 +34,6 @@ Show the usage: kubectl top pod ${deployName}
 Fortio test: kubectl run -it fortio --rm --image=fortio/fortio -- load -qps 800 -t 120s -c 70 "http://goserver-service/health"
 Run kubectl: kubectl port-forward svc/goserver-service 9000:80
 Watch: watch -n1 kubectl get ${deployName}
+Get storages: kubectl get storageclass
+Delete stateful: kubectl delete statefulset ${deployName}
+Scale manual: kubectl scale stateful ${deployName} --replica=${quantity}
