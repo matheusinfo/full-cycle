@@ -37,3 +37,7 @@ Watch: watch -n1 kubectl get ${deployName}
 Get storages: kubectl get storageclass
 Delete stateful: kubectl delete statefulset ${deployName}
 Scale manual: kubectl scale stateful ${deployName} --replica=${quantity}
+List namespaces: get ns
+Create namespace: kubectl create ns dev
+Apply in a specific namespace: kubectl apply -f ${yamlFile} -n=${namespace}
+View accounts: kubectl get serviceaccounts

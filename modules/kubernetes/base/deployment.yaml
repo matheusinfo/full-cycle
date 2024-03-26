@@ -5,6 +5,8 @@ metadata:
   labels:
     app: goserver
 spec: 
+  # namespace: dev
+  # serviceAccount: server
   selector:
     matchLabels:
       app: goserver
