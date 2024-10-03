@@ -15,6 +15,7 @@ This repository is intended to store my progress throughout the Full Cycle cours
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/ddd">DDD</a>
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/kubernets">Kubernets</a>
 * <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/opentelemetry">Opentelemetry</a>
+* <a href="https://github.com/matheusinfo/full-cycle/tree/master/modules/ansible">Ansible</a>
 
 ---
 
